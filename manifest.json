@@ -2,26 +2,26 @@
     "manifest_version": 3,
     "name": "BGG Smart Back",
     "version": "1.0",
-    "permissions": [
+    "permissions": 
+    [
         "history",
         "tabs",
         "storage"
     ],
-    "background": {
+    "background": 
+    {
         "service_worker": "scripts/background.js"
     },
-    "content_scripts": [
+    "content_scripts": 
+    [
         {
-            "matches": [
-                "*://boardgamegeek.com/image/*"
-            ],
-            "js": [
-                "scripts/content.js"
-            ],
-            "run_at": "document_start"
+            "matches":  ["*://boardgamegeek.com/image/*"],
+            "js":       ["scripts/content.js"],
+            "run_at":   "document_start"
         }
     ],
-    "action": {
+    "action": 
+    {
         "default_popup": "popup/popup.html"
     }
 }

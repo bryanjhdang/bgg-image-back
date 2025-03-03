@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () =>
     // Grab the button element
     const button = document.getElementById("toggleBtn");
 
+    console.log("dom console loaded popup.js")
+
     chrome.storage.sync.get(["enabled"], (result) => 
     {
         button.textContent = result.enabled ? "Disable" : "Enable";
